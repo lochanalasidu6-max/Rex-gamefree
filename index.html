@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120f">
+  <meta name="description" content="Discover PC games, explore curated picks, and jump to official game stores with REX GAMES.">
+  <title>REX GAMES | PC games, picked well</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.akamai.steamstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="REX GAMES home"><span class="brand-mark">R</span><span>REX<span class="brand-light">GAMES</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#games">All games</a>
+      <a class="nav-link" href="#categories">Categories</a>
+      <a class="nav-link" href="#games" data-free-link>Free games</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <a class="top-cta" href="#games">Browse library <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media" id="hero-media" role="img" aria-label="Featured PC game artwork"></div>
+      <div class="hero-scrim"></div>
+      <div class="hero-topline"><span class="eyebrow"><i></i> THE PC GAME INDEX</span><span class="hero-count" id="hero-count">01 / 03</span></div>
+      <div class="hero-content">
+        <p class="hero-kicker" id="hero-kicker">PLAY SOMETHING LEGENDARY</p>
+        <h1 id="hero-title">WELCOME TO<br><span>REX GAMES</span></h1>
+        <p class="hero-subtitle">YOUR ULTIMATE PC GAMING DESTINATION</p>
+        <p class="hero-copy" id="hero-copy">The next world you lose a weekend to is waiting.</p>
+        <div class="hero-actions">
+          <a class="button button-lime" href="#games">Explore games <span aria-hidden="true">↘</span></a>
+          <button class="button button-quiet" id="hero-details" type="button"><span class="play-icon" aria-hidden="true">▶</span> Discover the pick</button>
+        </div>
+      </div>
+      <div class="hero-tools">
+        <form class="hero-search" id="hero-search-form" role="search">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <label class="visually-hidden" for="hero-search">Search games</label>
+          <input id="hero-search" type="search" placeholder="Find your next game..." autocomplete="off">
+          <kbd>ENTER</kbd>
+        </form>
+        <div class="slider-controls" aria-label="Featured game controls">
+          <button class="slider-arrow" id="slide-prev" type="button" aria-label="Previous featured game">←</button>
+          <div class="slider-dots" id="slider-dots" aria-label="Choose featured game"></div>
+          <button class="slider-arrow" id="slide-next" type="button" aria-label="Next featured game">→</button>
+        </div>
+      </div>
+      <span class="hero-index" aria-hidden="true">RG / 026</span>
+    </section>
+
+    <div class="ticker" aria-label="Store promise"><div class="ticker-track"><span>GOOD GAMES. NO GUESSWORK.</span><b>✳</b><span>OFFICIAL STORES ONLY</span><b>✳</b><span>YOUR NEXT OBSESSION</span><b>✳</b><span>GOOD GAMES. NO GUESSWORK.</span><b>✳</b><span>OFFICIAL STORES ONLY</span><b>✳</b><span>YOUR NEXT OBSESSION</span><b>✳</b></div></div>
+
+    <section class="section feature-section" aria-labelledby="featured-heading">
+      <div class="section-heading"><div><p class="eyebrow">HAND-PICKED WORLDS</p><h2 id="featured-heading">Featured <span>games</span></h2></div><a class="text-link" href="#games">Explore library <span aria-hidden="true">↗</span></a></div>
+      <div class="feature-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="section trending-section" aria-labelledby="trending-heading">
+      <div class="section-heading"><div><p class="eyebrow">ON EVERYONE'S RADAR</p><h2 id="trending-heading">Trending <span>now</span></h2></div><a class="text-link" href="#games">See all games <span aria-hidden="true">↗</span></a></div>
+      <div class="game-strip" id="trending-grid"></div>
+    </section>
+
+    <section class="category-band" id="categories" aria-labelledby="category-heading">
+      <div class="section category-inner">
+        <div class="category-intro"><p class="eyebrow">PICK YOUR PLAYSTYLE</p><h2 id="category-heading">What are you<br>in the mood <span>for?</span></h2><p>Big quests. Quick rounds. Strange new worlds. Start anywhere.</p></div>
+        <div class="category-list" id="category-list"></div>
+      </div>
+    </section>
+
+    <section class="section library-section" id="games" aria-labelledby="library-heading">
+      <div class="section-heading library-title-row"><div><p class="eyebrow">THE REX INDEX</p><h2 id="library-heading">Find your <span>next game</span></h2></div><span class="library-count" id="library-count"></span></div>
+      <div class="catalog-controls">
+        <div class="filter-tabs" id="filter-tabs" role="group" aria-label="Filter games by category"></div>
+        <label class="sort-control">Sort by <select id="sort-select"><option value="popular">Popularity</option><option value="name">Name</option><option value="year">Release year</option></select></label>
+      </div>
+      <div class="game-grid" id="game-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No games found. Try a different title or category.</p>
+    </section>
+
+    <section class="section latest-section" id="latest-games" aria-labelledby="latest-heading">
+      <div class="section-heading"><div><p class="eyebrow">LATEST RELEASES</p><h2 id="latest-heading">Latest <span>games</span></h2></div><a class="text-link" href="#games">Browse all <span aria-hidden="true">↗</span></a></div>
+      <div class="latest-layout"><div class="latest-feature" id="latest-feature"></div><div class="latest-side" id="latest-side"></div></div>
+    </section>
+
+    <section class="dispatch-band" aria-labelledby="dispatch-heading">
+      <div class="section dispatch-inner">
+        <div class="dispatch-heading"><p class="eyebrow">THE REX DISPATCH</p><h2 id="dispatch-heading">Worth a <span>read.</span></h2><p>Notes from the worlds we can't stop playing.</p></div>
+        <div class="dispatch-grid">
+          <article class="dispatch-item"><span class="dispatch-number">01 / FIELD NOTES</span><h3>Small studios, huge worlds</h3><p>Why the most memorable adventures don't need a hundred-hour runtime.</p><a href="#games" class="text-link">Find an indie pick <span aria-hidden="true">↗</span></a></article>
+          <article class="dispatch-item"><span class="dispatch-number">02 / PLAYER GUIDE</span><h3>Build a better co-op night</h3><p>Four ways to pick a game your whole squad will actually finish.</p><a href="#games" class="text-link">Explore the library <span aria-hidden="true">↗</span></a></article>
+          <article class="dispatch-item"><span class="dispatch-number">03 / REX RADAR</span><h3>Free-to-play, no catch</h3><p>Start with games that cost nothing upfront, from tactical to chaotic.</p><a href="#games" class="text-link" data-free-link>See free games <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="about" aria-labelledby="newsletter-heading">
+      <div class="newsletter-stamp" aria-hidden="true">REX<br>MAIL<br><span>✳</span></div>
+      <div class="newsletter-copy"><p class="eyebrow">A GOOD KIND OF DISTRACTION</p><h2 id="newsletter-heading">Get the <span>good stuff.</span></h2><p>New finds, free picks, and dispatches from the REX crew. Infrequent, always worth opening.</p></div>
+      <form class="newsletter-form" id="newsletter-form"><label for="email-input" class="visually-hidden">Email address</label><div class="email-row"><input id="email-input" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe to newsletter">↗</button></div><p id="newsletter-message" aria-live="polite">Demo signup only. No email is stored or sent.</p></form>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-main"><a class="brand" href="#home"><span class="brand-mark">R</span><span>REX<span class="brand-light">GAMES</span></span></a><p>Good games deserve a good way in.<br>Discover. Decide. Play.</p><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a><a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer" aria-label="Twitch">TW</a></div></div>
+    <div class="footer-bottom"><span>© <span id="current-year"></span> REX GAMES. A PLAYER-FIRST INDEX.</span><div><a href="#privacy-policy" data-legal="privacy">Privacy policy</a><a href="#terms-of-use" data-legal="terms">Terms of use</a><a href="#about">About us</a></div><span class="footer-note">Store links open official storefronts.</span></div>
+  </footer>
+
+  <dialog class="game-dialog" id="game-dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="dialog-close" type="button" aria-label="Close game details">×</button><div id="dialog-content"></div></dialog>
+  <dialog class="game-dialog legal-dialog" id="legal-dialog" aria-labelledby="legal-title"><button class="dialog-close" id="legal-close" type="button" aria-label="Close legal information">×</button><div class="legal-dialog-body"><p class="eyebrow">REX GAMES / DEMO</p><h2 id="legal-title"></h2><p id="legal-copy"></p></div></dialog>
+</body>
+</html>
